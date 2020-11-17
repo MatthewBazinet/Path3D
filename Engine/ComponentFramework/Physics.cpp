@@ -64,3 +64,26 @@ void Physics::SphereSphereCollisionResponse(PhysicsObject &object1, PhysicsObjec
 	object1.vel += normalizedLineOfAction * (v1pnew - v1p);
 	object2.vel += normalizedLineOfAction * (v2pnew - v2p);
 }
+
+bool Physics::SphereRayCollision(PhysicsObject& sphere, Raycast& ray)
+{
+	Vec3 position = Vec3(sphere.boundingSphere.x, sphere.boundingSphere.y, sphere.boundingSphere.z);
+	float a = ray.dir * ray.dir;
+	float b = 2 * ((ray.start - position) * ray.dir);
+	float c = (ray.start - position) * (ray.start - position) - sphere.boundingSphere.r * sphere.boundingSphere.r;
+	float d = b * b - 4 * a * c;
+
+	if (d < 0) {
+		return false;
+	}
+	else {
+		float t1 = (-b + sqrt(d)) / (2 * a);
+		float t2 = (-b - sqrt(d)) / (2 * a);
+		if (t1 >= 0 || t2 >= 0) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+}

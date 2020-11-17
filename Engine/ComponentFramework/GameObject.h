@@ -1,6 +1,7 @@
 #ifndef GAMEOBJECT_H
 #define GAMEOBJECT_H
-
+#include <iostream>
+using namespace std;
 union SDL_Event; /// A forward declaration 
 
 class GameObject {

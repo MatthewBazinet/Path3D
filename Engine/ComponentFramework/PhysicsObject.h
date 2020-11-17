@@ -12,6 +12,7 @@ class PhysicsObject {
 public:
 	PhysicsObject();
 	virtual ~PhysicsObject();
+	std::string tag;
 	
 
 public:

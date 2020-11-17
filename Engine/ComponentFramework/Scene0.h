@@ -11,12 +11,14 @@ class DemoObject;
 class Mesh;
 class Shader;
 class Texture;
+class Enemy;
 
 class Scene0 : public Scene {
 private:
 	Camera *camera;
 	unsigned int lightNum = 3;
 	DemoObject *demoObject;
+	Enemy *enemy1;
 	Vec3 lightSources[3];
 	Vec4 colors[3];
 	Vec3 lightSource;

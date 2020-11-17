@@ -1,5 +1,6 @@
 #ifndef SPHERE_H
 #define SPHERE_H
+#include "Vector.h"
 
 namespace  MATH {
 	struct Sphere : public Vec3 {

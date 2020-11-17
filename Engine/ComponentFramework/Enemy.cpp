@@ -1,4 +1,5 @@
 #include "Enemy.h"
+#include "Physics.h"
 
 Enemy::Enemy(Pawn* player)
 {
@@ -21,7 +22,7 @@ Enemy::~Enemy()
 void Enemy::Update()
 {
 	if (CanSeePlayer()) {
-
+		
 	}
 	else {
 
@@ -31,13 +32,17 @@ void Enemy::Update()
 
 bool Enemy::CanSeePlayer()
 {
+	Raycast ray = Raycast(body->getPos(),body->getForwardVector());
 	if (acos(VMath::dot((VMath::normalize(body->getPos() + player->body->getPos())), //Gets direction to player
 		body->getForwardVector())) //Dotted with forward vector to check angle
 		/ DEGREES_TO_RADIANS //acos returns radians so it must be converted
 		< fovAngle) {
-		//if(rayCast.forward.hit = player) {return true} else { return false}
-		//RayCast needed
-		return true;
+		if (ray.getTag(player->body, 1) == "Player") {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	else {
 		return false;

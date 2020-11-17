@@ -3,6 +3,7 @@
 #include "DemoObject.h"
 #include "Plane.h"
 #include "VMath.h"
+#include "Raycast.h"
 class Physics {
 public:
 	
@@ -11,6 +12,7 @@ public:
 	static void PlaneSphereCollisionResponse(PhysicsObject &object, const Plane &p);
 	static bool SphereSphereCollision(const PhysicsObject &object1, const PhysicsObject &object2);
 	static void SphereSphereCollisionResponse(PhysicsObject &object1, PhysicsObject &object2);
+	static bool SphereRayCollision(PhysicsObject& sphere, Raycast& ray);
 };
 
 #endif
