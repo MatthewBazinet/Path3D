@@ -10,8 +10,8 @@ public:
 	PlayerController(PhysicsObject* body);
 	~PlayerController();
 
-
-	void Update();
+	void HandleEvents();
+	void Update(float deltaTime);
 
 private:
 

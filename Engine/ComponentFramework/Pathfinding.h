@@ -4,8 +4,8 @@
 #include <stack>
 #include <iostream>
 #define NUMBER_OF_DIRECTIONS 8
-#define MAP_WIDTH 5
-#define MAP_HEIGHT 5
+#define MAP_WIDTH 100
+#define MAP_HEIGHT 100
 
 
 using namespace std;

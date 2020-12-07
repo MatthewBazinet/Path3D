@@ -5,12 +5,26 @@
 #include<SDL_events.h>
 #include<SDL.h>
 #include "MMath.h"
+#include "Physics.h"
 
 PlayerController::PlayerController(PhysicsObject* body)
 {
+	this->body = body;
+	
+}
+
+PlayerController::~PlayerController()
+{
+	delete body;
+	body = nullptr;
+	
+}
+
+void PlayerController::HandleEvents()
+{
 	SDL_Event event;
 
-	if (SDL_PollEvent (&event))	
+	if (SDL_PollEvent(&event))
 	{
 		if (event.type == SDL_KEYDOWN)
 		{
@@ -33,7 +47,7 @@ PlayerController::PlayerController(PhysicsObject* body)
 			body->setVel(Vec3(0.0f, 2.0f, 0.0f));
 		}
 	}
-	if (SDLK_a) 
+	if (SDLK_a)
 	{
 		//move player left
 		body->setVel(Vec3(-1.0f, 0.0f, 0.0f));
@@ -68,20 +82,10 @@ PlayerController::PlayerController(PhysicsObject* body)
 	{
 		//make player crouch
 	}
-	
+
 }
 
-PlayerController::~PlayerController()
+void PlayerController::Update(float deltaTime)
 {
-	delete body;
-	body = nullptr;
-	
-}
-
-void PlayerController::Update()
-{
-	
-	if (false) { 
-		MoveInDir(Vec3(1,0,0), speed);
-	}
+	Physics::SimpleNewtonMotion(*body, deltaTime);
 }
