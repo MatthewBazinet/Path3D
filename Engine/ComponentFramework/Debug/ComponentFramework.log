@@ -1,38 +1,30 @@
-﻿  Camera.cpp
-  Debug.cpp
-  Enemy.cpp
-  GameObject.h
-  DemoObject.cpp
-  Noise.cpp
+﻿  Enemy.cpp
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(46,1): warning C4156:  deletion of an array expression without using the array form of 'delete'; array form substituted
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(46,1): warning C4154:  deletion of an array expression; conversion to pointer supplied
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(182,50): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(183,62): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+  Pathfinding.cpp
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(184,54): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(46,1): warning C4156:  deletion of an array expression without using the array form of 'delete'; array form substituted
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(46,1): warning C4154:  deletion of an array expression; conversion to pointer supplied
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(182,50): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(183,62): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
   Pawn.cpp
-  PeopleDying.cpp
-  Physics.cpp
-  PhysicsObject.cpp
-  PlanetaryObject.cpp
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(184,54): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(46,1): warning C4156:  deletion of an array expression without using the array form of 'delete'; array form substituted
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(46,1): warning C4154:  deletion of an array expression; conversion to pointer supplied
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(182,50): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(183,62): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(184,54): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pawn.cpp(51,33): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pawn.cpp(52,33): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pawn.cpp(70,25): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
   PlayerController.cpp
-  Scene2.cpp
-  Scene3.cpp
-  Scene4.cpp
-  Scene5.cpp
-  Scene6.cpp
-  SceneManager.cpp
-  Main.cpp
-  Mesh.cpp
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pawn.cpp(71,25): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(46,1): warning C4156:  deletion of an array expression without using the array form of 'delete'; array form substituted
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(46,1): warning C4154:  deletion of an array expression; conversion to pointer supplied
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(182,50): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(183,62): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
   Generating Code...
-  Compiling...
-  MMath.cpp
-  ObjLoader.cpp
-  Scene0.cpp
-  Scene1.cpp
-  Shader.cpp
-  Skybox.cpp
-  SpaceShip.cpp
-  Texture.cpp
-  Timer.cpp
-  Trackball.cpp
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\PeopleDying.cpp(21,20): warning C4305:  '*=': truncation from 'double' to 'float'
-  VMath.cpp
-  Window.cpp
-  Generating Code...
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Trackball.cpp(52,14): warning C4244:  'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(184,54): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
   ComponentFramework.vcxproj -> C:\Users\matth\Documents\Git\Path3D\Engine\Debug\ComponentFramework.exe

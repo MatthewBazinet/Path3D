@@ -38,13 +38,13 @@ void Pawn::Update(float deltaTime)
 {
 	Physics::SimpleNewtonMotion(*body, deltaTime);
 	Vec3 pos = body->getPos();
-	if (path.size > 0) {
+	if (path.size() > 0) {
 		if (pos.x >= destination.x - 0.1 && pos.x <= destination.x + 0.1) {
 			if (pos.y >= destination.y - 0.1 && pos.y <= destination.y + 0.1) {
-				if (index == path.size) {
+				if (index == path.size()) {
 					destination = body->getPos();
 					index = 0;
-					path.clear;
+					path.clear();
 				}
 				else {
 					index++;

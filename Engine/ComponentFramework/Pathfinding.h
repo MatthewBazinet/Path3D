@@ -75,6 +75,38 @@ static bool isDestination(int x, int y, Node destination) {
 	return false;
 }
 
+static vector<Node> makePath(Node map[MAP_WIDTH][MAP_HEIGHT], Node dest) {
+	try {
+		cout << "Found a path" << endl;
+		int x = dest.x;
+		int y = dest.y;
+		stack<Node> path;
+		vector<Node> usablePath;
+
+		while (!(map[x][y].parentX == x && map[x][y].parentY == y)
+			&& map[x][y].x != -1 && map[x][y].y != -1)
+		{
+			path.push(map[x][y]);
+			int tempX = map[x][y].parentX;
+			int tempY = map[x][y].parentY;
+			x = tempX;
+			y = tempY;
+
+		}
+		path.push(map[x][y]);
+
+		while (!path.empty()) {
+			Node top = path.top();
+			path.pop();
+			usablePath.emplace_back(top);
+		}
+		return usablePath;
+	}
+	catch (const exception& e) {
+		cout << e.what() << endl;
+	}
+}
+
 static vector<Node> aStar(Node pawn, Node destination) {
 	vector<Node> empty;
 	if (destination.x < 0 || destination.x >= MAP_WIDTH || destination.y < 0 || destination.y >= MAP_HEIGHT) {
@@ -165,37 +197,7 @@ static vector<Node> aStar(Node pawn, Node destination) {
 	}
 }
 
-static vector<Node> makePath(Node map[MAP_WIDTH][MAP_HEIGHT], Node dest) {
-	try {
-		cout << "Found a path" << endl;
-		int x = dest.x;
-		int y = dest.y;
-		stack<Node> path;
-		vector<Node> usablePath;
-
-		while (!(map[x][y].parentX == x && map[x][y].parentY == y)
-			&& map[x][y].x != -1 && map[x][y].y != -1)
-		{
-			path.push(map[x][y]);
-			int tempX = map[x][y].parentX;
-			int tempY = map[x][y].parentY;
-			x = tempX;
-			y = tempY;
-
-		}
-		path.push(map[x][y]);
-
-		while (!path.empty()) {
-			Node top = path.top();
-			path.pop();
-			usablePath.emplace_back(top);
-		}
-		return usablePath;
-	}
-	catch (const exception& e) {
-		cout << e.what() << endl;
-	}
-}
+ 
 
 
 #endif
