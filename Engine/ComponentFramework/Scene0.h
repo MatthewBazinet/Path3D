@@ -18,6 +18,13 @@ private:
 	Camera *camera;
 	unsigned int lightNum = 3;
 	MeshObject *demoObject;
+	MeshObject *wallOne;
+	MeshObject *wallTwo;
+	MeshObject *wallThree;
+	MeshObject *wallFour;
+	MeshObject *wallFive;
+	MeshObject *wallSix;
+	MeshObject *wallSeven;
 	Enemy *enemy1;
 	Vec3 lightSources[3];
 	Vec4 colors[3];

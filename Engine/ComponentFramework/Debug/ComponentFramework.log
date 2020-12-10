@@ -1,24 +1,6 @@
-﻿  Enemy.cpp
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(46,1): warning C4156:  deletion of an array expression without using the array form of 'delete'; array form substituted
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(46,1): warning C4154:  deletion of an array expression; conversion to pointer supplied
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(182,50): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(183,62): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
-  Pawn.cpp
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(184,54): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(46,1): warning C4156:  deletion of an array expression without using the array form of 'delete'; array form substituted
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(46,1): warning C4154:  deletion of an array expression; conversion to pointer supplied
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(182,50): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(183,62): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(184,54): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pawn.cpp(45,33): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pawn.cpp(46,33): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pawn.cpp(64,25): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
-  PlayerController.cpp
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pawn.cpp(65,25): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(46,1): warning C4156:  deletion of an array expression without using the array form of 'delete'; array form substituted
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(46,1): warning C4154:  deletion of an array expression; conversion to pointer supplied
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(182,50): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(183,62): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
-  Generating Code...
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pathfinding.h(184,54): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
-  ComponentFramework.vcxproj -> C:\Users\matth\Documents\Git\Path3D\Engine\Debug\ComponentFramework.exe
+﻿  Scene0.cpp
+C:\Users\Andrew Tsianakos\Documents\GitHub\Path3D-Copy-3\Path3D\Engine\ComponentFramework\Scene0.cpp(74,36): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Andrew Tsianakos\Documents\GitHub\Path3D-Copy-3\Path3D\Engine\ComponentFramework\Scene0.cpp(93,37): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Andrew Tsianakos\Documents\GitHub\Path3D-Copy-3\Path3D\Engine\ComponentFramework\Scene0.cpp(111,37): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Andrew Tsianakos\Documents\GitHub\Path3D-Copy-3\Path3D\Engine\ComponentFramework\Scene0.cpp(120,38): warning C4305: 'argument': truncation from 'double' to 'float'
+  ComponentFramework.vcxproj -> C:\Users\Andrew Tsianakos\Documents\GitHub\Path3D-Copy-3\Path3D\Engine\Debug\ComponentFramework.exe
