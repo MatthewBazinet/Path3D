@@ -2,16 +2,18 @@
 #define PAWN_H
 #include "PhysicsObject.h"
 #include "Pathfinding.h"
+#include "MeshObject.h"
+
 class Pawn
 {
 public:
+	MeshObject* meshBody;
 	Pawn();
-	Pawn(PhysicsObject* aBody);
-	Pawn(PhysicsObject* aBody, float aSpeed);
-	Pawn(float aSpeed);
+	Pawn(MeshObject* aMeshBody);
+	Pawn(MeshObject* aMeshBody, float aSpeed);
 	~Pawn();
 
-	PhysicsObject* body;
+
 
 	void Update(float deltaTime);
 

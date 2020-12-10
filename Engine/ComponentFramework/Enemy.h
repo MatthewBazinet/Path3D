@@ -7,8 +7,8 @@ class Enemy: public Pawn
 {
 
 public:
-	Enemy(Pawn* player);
-	Enemy(Pawn* player, float angleOfFieldOfView);
+	Enemy(MeshObject* aMeshObject, Pawn* player);
+	Enemy(MeshObject* aMeshObject, Pawn* player, float angleOfFieldOfView);
 	~Enemy();
 
 	void Update();

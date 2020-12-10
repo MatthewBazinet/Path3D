@@ -3,29 +3,23 @@
 
 Pawn::Pawn()
 {
-	body = new PhysicsObject();
+	meshBody = nullptr;
+	speed = 1.0f;
+	index = 0;
+	vector<Node> path = vector<Node>();
+	destination = Vec3();
+}
+
+Pawn::Pawn(MeshObject* aMeshBody)
+{
+	meshBody = aMeshBody;
 	speed = 1.0f;
 	index = 0;
 }
 
-Pawn::Pawn(PhysicsObject* aBody)
+Pawn::Pawn(MeshObject* aMeshBody, float aSpeed)
 {
-	body = aBody;
-	speed = 1.0f;
-	index = 0;
-
-}
-
-Pawn::Pawn(PhysicsObject* aBody, float aSpeed)
-{
-	body = aBody;
-	speed = aSpeed;
-	index = 0;
-}
-
-Pawn::Pawn(float aSpeed)
-{
-	body = new PhysicsObject();
+	meshBody = aMeshBody;
 	speed = aSpeed;
 	index = 0;
 }
@@ -36,13 +30,13 @@ Pawn::~Pawn()
 
 void Pawn::Update(float deltaTime)
 {
-	Physics::SimpleNewtonMotion(*body, deltaTime);
-	Vec3 pos = body->getPos();
+	Physics::SimpleNewtonMotion(*meshBody, deltaTime);
+	Vec3 pos = meshBody->getPos();
 	if (path.size() > 0) {
 		if (pos.x >= destination.x - 0.1 && pos.x <= destination.x + 0.1) {
 			if (pos.y >= destination.y - 0.1 && pos.y <= destination.y + 0.1) {
 				if (index == path.size()) {
-					destination = body->getPos();
+					destination = meshBody->getPos();
 					index = 0;
 					path.clear();
 				}
@@ -61,7 +55,7 @@ void Pawn::Update(float deltaTime)
 void Pawn::MoveInDir(Vec3 dir)
 {
 	Vec3 vel = dir * speed;
-	body->setVel(vel);
+	meshBody->setVel(vel);
 }
 
 void Pawn::FollowPath(vector<Node> aPath)

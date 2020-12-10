@@ -25,6 +25,12 @@
     <Filter Include="Source Files\Scenes">
       <UniqueIdentifier>{e8c82a08-d757-47ee-b6fe-eee59a99570f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Objects">
+      <UniqueIdentifier>{5904c287-1f95-4cef-b109-fd65befeae17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects">
+      <UniqueIdentifier>{3a9b7e9a-8d7b-4bcc-9165-1ced3dc54928}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -69,9 +75,6 @@
     <ClCompile Include="SceneManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject.h">
-      <Filter>Header Files</Filter>
-    </ClCompile>
     <ClCompile Include="Scene2.cpp">
       <Filter>Source Files\Scenes</Filter>
     </ClCompile>
@@ -88,12 +91,6 @@
       <Filter>Source Files\Scenes</Filter>
     </ClCompile>
     <ClCompile Include="Physics.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PhysicsObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DemoObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SpaceShip.cpp">
@@ -126,8 +123,14 @@
     <ClCompile Include="Raycast.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Pathfinding.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="MeshObject.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsObject.cpp">
+      <Filter>Source Files\Objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -203,12 +206,6 @@
     <ClInclude Include="Physics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PhysicsObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DemoObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SpaceShip.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -241,6 +238,12 @@
     </ClInclude>
     <ClInclude Include="Pathfinding.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshObject.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsObject.h">
+      <Filter>Header Files\Objects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

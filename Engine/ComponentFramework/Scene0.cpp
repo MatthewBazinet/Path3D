@@ -3,7 +3,7 @@
 #include "Debug.h"
 #include "Scene0.h"
 #include "Camera.h"
-#include "DemoObject.h"
+#include "MeshObject.h"
 #include "ObjLoader.h"
 #include "Mesh.h"
 #include "Shader.h"
@@ -47,7 +47,7 @@ bool Scene0::OnCreate() {
 		return false;
 	}
 
-	demoObject = new DemoObject(meshPtr, shaderPtr, texturePtr);
+	demoObject = new MeshObject(meshPtr, shaderPtr, texturePtr);
 	if (demoObject == nullptr) {
 		Debug::FatalError("GameObject could not be created", __FILE__, __LINE__);
 		return false;

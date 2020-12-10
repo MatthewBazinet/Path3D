@@ -3,7 +3,7 @@
 #include "Debug.h"
 #include "Scene5.h"
 #include "Camera.h"
-#include "DemoObject.h"
+#include "MeshObject.h"
 #include "ObjLoader.h"
 #include "Mesh.h"
 #include "Shader.h"

@@ -7,7 +7,7 @@
 class PlayerController : public Pawn
 {
 public:
-	PlayerController(PhysicsObject* body);
+	PlayerController(MeshObject* meshBody);
 	~PlayerController();
 
 	void HandleEvents();

@@ -18,7 +18,7 @@ private:
 	Shader* skyboxShader;
 	Texture* texturePtr;
 	Skybox* skybox;
-	DemoObject* demoObject;
+	MeshObject* demoObject;
 	Trackball* tb;
 
 public:

@@ -7,7 +7,7 @@ using namespace MATH;
 /// Forward declarations 
 union SDL_Event;
 class Camera;
-class DemoObject;
+class MeshObject;
 class Mesh;
 class Shader;
 class Texture;
@@ -17,7 +17,7 @@ class Scene0 : public Scene {
 private:
 	Camera *camera;
 	unsigned int lightNum = 3;
-	DemoObject *demoObject;
+	MeshObject *demoObject;
 	Enemy *enemy1;
 	Vec3 lightSources[3];
 	Vec4 colors[3];

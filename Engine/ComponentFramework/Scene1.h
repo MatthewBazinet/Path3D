@@ -7,7 +7,7 @@ using namespace MATH;
 /// Forward declarations 
 union SDL_Event;
 class Camera;
-class DemoObject;
+class MeshObject;
 class Mesh;
 class Shader;
 class Texture;

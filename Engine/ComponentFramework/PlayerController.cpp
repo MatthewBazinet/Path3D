@@ -7,16 +7,16 @@
 #include "MMath.h"
 #include "Physics.h"
 
-PlayerController::PlayerController(PhysicsObject* body)
+PlayerController::PlayerController(MeshObject* meshBody)
 {
-	this->body = body;
+	this->meshBody = meshBody;
 	
 }
 
 PlayerController::~PlayerController()
 {
-	delete body;
-	body = nullptr;
+	delete meshBody;
+	meshBody = nullptr;
 	
 }
 
@@ -39,43 +39,43 @@ void PlayerController::HandleEvents()
 	if (SDLK_w)
 	{
 		//move player forward
-		body->setVel(Vec3(0.0f, 1.0f, 0.0f));
+		meshBody->setVel(Vec3(0.0f, 1.0f, 0.0f));
 		//std::cout << "you clicked w on the keyboard" << std::endl;
 		if (SDLK_LSHIFT)
 		{
 			//make player sprint
-			body->setVel(Vec3(0.0f, 2.0f, 0.0f));
+			meshBody->setVel(Vec3(0.0f, 2.0f, 0.0f));
 		}
 	}
 	if (SDLK_a)
 	{
 		//move player left
-		body->setVel(Vec3(-1.0f, 0.0f, 0.0f));
+		meshBody->setVel(Vec3(-1.0f, 0.0f, 0.0f));
 		if (SDLK_LSHIFT)
 		{
 			//make player sprint
-			body->setVel(Vec3(-2.0f, 0.0f, 0.0f));
+			meshBody->setVel(Vec3(-2.0f, 0.0f, 0.0f));
 		}
 	}
 	if (SDLK_s)
 	{
 		//move player backward
-		body->setVel(Vec3(0.0f, -1.0f, 0.0f));
+		meshBody->setVel(Vec3(0.0f, -1.0f, 0.0f));
 		if (SDLK_LSHIFT)
 		{
 			//make player sprint
-			body->setVel(Vec3(0.0f, -2.0f, 0.0f));
+			meshBody->setVel(Vec3(0.0f, -2.0f, 0.0f));
 		}
 	}
 	if (SDLK_d)
 	{
 		//move player right
-		body->setVel(Vec3(1.0f, 0.0f, 0.0f));
+		meshBody->setVel(Vec3(1.0f, 0.0f, 0.0f));
 
 		if (SDLK_LSHIFT)
 		{
 			//make player sprint
-			body->setVel(Vec3(2.0f, 0.0f, 0.0f));
+			meshBody->setVel(Vec3(2.0f, 0.0f, 0.0f));
 		}
 	}
 	if (SDLK_c)
@@ -87,5 +87,5 @@ void PlayerController::HandleEvents()
 
 void PlayerController::Update(float deltaTime)
 {
-	Physics::SimpleNewtonMotion(*body, deltaTime);
+	Physics::SimpleNewtonMotion(*meshBody, deltaTime);
 }

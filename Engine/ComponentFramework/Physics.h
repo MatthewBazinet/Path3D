@@ -1,6 +1,6 @@
 #ifndef PHYSICS_H
 #define PHYSICS_H
-#include "DemoObject.h"
+#include "MeshObject.h"
 #include "Plane.h"
 #include "VMath.h"
 #include "Raycast.h"

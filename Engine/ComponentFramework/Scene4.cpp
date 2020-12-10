@@ -3,7 +3,7 @@
 #include "Debug.h"
 #include "Scene4.h"
 #include "Camera.h"
-#include "DemoObject.h"
+#include "MeshObject.h"
 #include "ObjLoader.h"
 #include "Mesh.h"
 #include "Shader.h"
@@ -43,7 +43,7 @@ bool Scene4::OnCreate() {
 		Debug::FatalError("Couldn't load texture", __FILE__, __LINE__);
 		return false;
 	}
-	demoObject = new DemoObject(meshPtr, shaderPtr, texturePtr);
+	demoObject = new MeshObject(meshPtr, shaderPtr, texturePtr);
 	if (demoObject == nullptr) {
 		Debug::FatalError("GameObject could not be created", __FILE__, __LINE__);
 		return false;
