@@ -10,7 +10,7 @@ public:
 	PlayerController(MeshObject* meshBody);
 	~PlayerController();
 
-	void HandleEvents();
+	void HandleEvents(const SDL_Event& event);
 	void Update(float deltaTime);
 
 private:

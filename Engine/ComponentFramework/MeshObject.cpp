@@ -7,15 +7,20 @@ MeshObject::MeshObject(Mesh *mesh_, Shader *shader_, Texture *texture_):
 
 	modelMatrixID = shader->getUniformID("modelMatrix");
 	normalMatrixID = shader->getUniformID("normalMatrix");
+	scale = Vec3(1,1,1);
 }
 
 MeshObject::~MeshObject() {}
 
-bool MeshObject::OnCreate() { return true;  } /// Just a stub
+bool MeshObject::OnCreate() {
+	return true;  }
 void MeshObject::OnDestroy() {}				  /// Just a stub
-void MeshObject::Update(float deltaTime_) {} /// Just a stub
+void MeshObject::Update(float deltaTime_) {
+	setModelMatrix(MMath::translate(pos) * MMath::rotate(angle, Vec3(0, 1, 0)) * MMath::scale(scale));
+}
 
 void MeshObject::Render() const {
+
 
 	/// This is some fancy code.  Assigning a 4x4 matrix to a 3x3 matrix
 	/// just steals the upper 3x3 of the 4x4 and assigns thoses values 
@@ -32,6 +37,7 @@ void MeshObject::Render() const {
 
 	/// Unbind the texture
 	glBindTexture(GL_TEXTURE_2D, 0);
+
 }
 
 void MeshObject::HandleEvents(const SDL_Event &event) {} /// Just a stub

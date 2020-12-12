@@ -20,72 +20,39 @@ PlayerController::~PlayerController()
 	
 }
 
-void PlayerController::HandleEvents()
+void PlayerController::HandleEvents(const SDL_Event& event)
 {
-	SDL_Event event;
 
-	if (SDL_PollEvent(&event))
-	{
-		if (event.type == SDL_KEYDOWN)
-		{
-			event.key.keysym.sym = true;
-		}
-		if (event.type == SDL_KEYUP)
-		{
-			event.key.keysym.sym = false;
-		}
-	}
+	switch (event.key.keysym.scancode) {
+	case SDL_SCANCODE_W:
 
-	if (SDLK_w)
-	{
 		//move player forward
-		meshBody->setVel(Vec3(0.0f, 1.0f, 0.0f));
+		meshBody->setVel(Vec3(0.0f, 0.0f, 1.0f));
 		//std::cout << "you clicked w on the keyboard" << std::endl;
-		if (SDLK_LSHIFT)
-		{
-			//make player sprint
-			meshBody->setVel(Vec3(0.0f, 2.0f, 0.0f));
-		}
-	}
-	if (SDLK_a)
-	{
+		break;
+	case SDL_SCANCODE_A:
 		//move player left
 		meshBody->setVel(Vec3(-1.0f, 0.0f, 0.0f));
-		if (SDLK_LSHIFT)
-		{
-			//make player sprint
-			meshBody->setVel(Vec3(-2.0f, 0.0f, 0.0f));
-		}
-	}
-	if (SDLK_s)
-	{
+		break;
+	case SDL_SCANCODE_S:
 		//move player backward
-		meshBody->setVel(Vec3(0.0f, -1.0f, 0.0f));
-		if (SDLK_LSHIFT)
-		{
-			//make player sprint
-			meshBody->setVel(Vec3(0.0f, -2.0f, 0.0f));
-		}
-	}
-	if (SDLK_d)
-	{
+		meshBody->setVel(Vec3(0.0f, 0.0f, -1.0f));
+		break;
+	case SDL_SCANCODE_D:
 		//move player right
 		meshBody->setVel(Vec3(1.0f, 0.0f, 0.0f));
+		break;
+	}
+	if (event.type == SDL_KEYUP) {
+		meshBody->setVel(Vec3(0));
+	}
 
-		if (SDLK_LSHIFT)
-		{
-			//make player sprint
-			meshBody->setVel(Vec3(2.0f, 0.0f, 0.0f));
-		}
-	}
-	if (SDLK_c)
-	{
-		//make player crouch
-	}
+
 
 }
 
 void PlayerController::Update(float deltaTime)
 {
 	Physics::SimpleNewtonMotion(*meshBody, deltaTime);
+	meshBody->Update(deltaTime);
 }

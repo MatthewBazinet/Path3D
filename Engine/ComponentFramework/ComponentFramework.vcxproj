@@ -71,6 +71,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>C:\GameDev\OpenGL\include;C:\GameDev\SDL\include;$(IncludePath)</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);PATH=%PATH%;C:\GameDev\OpenGL\include;C:\GameDev\SDL\include;
@@ -132,10 +133,10 @@
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Debug.cpp" />
-    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="GameObject.h" />
     <ClCompile Include="MeshObject.cpp" />
     <ClCompile Include="Noise.cpp" />
+    <ClCompile Include="Pathfinding.cpp" />
     <ClCompile Include="Pawn.cpp" />
     <ClCompile Include="PeopleDying.cpp" />
     <ClCompile Include="Physics.cpp" />
@@ -168,7 +169,6 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="MeshObject.h" />
-    <ClInclude Include="Enemy.h" />
     <ClInclude Include="Noise.h" />
     <ClInclude Include="Pathfinding.h" />
     <ClInclude Include="Pawn.h" />

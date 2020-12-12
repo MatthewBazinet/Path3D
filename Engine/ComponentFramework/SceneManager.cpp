@@ -105,10 +105,10 @@ void SceneManager::GetEvents() {
 			case SDL_SCANCODE_F6:
 				BuildScene(SCENE6);
 				break;
-
-			default:
+			case SDL_SCANCODE_HOME:
 				BuildScene(SCENE0);
 				break;
+
 			}
 		}
 		if (currentScene == nullptr) {

@@ -20,6 +20,7 @@ private:
 	Mesh *mesh;
 	Shader *shader;
 	Texture *texture;
+	Vec3 scale;
 
 public:
 	MeshObject(Mesh *mesh_, Shader *shader_, Texture *texture_);
@@ -34,6 +35,8 @@ public:
 	inline Shader* getShader() const { return shader; }
 	inline void setModelMatrix(const Matrix4 &modelMatrix_) { modelMatrix = modelMatrix_; }
 	inline const Matrix4& getModelMatrix() { return modelMatrix; }
+	inline const Vec3 getScale() { return scale; }
+	inline void setScale(Vec3 scale_) { scale = scale_; }
 };
 
 #endif

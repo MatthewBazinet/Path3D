@@ -2,6 +2,7 @@
 #define SCENE0_H
 #include "Scene.h"
 #include "Vector.h"
+
 using namespace MATH;
 
 /// Forward declarations 
@@ -11,13 +12,14 @@ class MeshObject;
 class Mesh;
 class Shader;
 class Texture;
-class Enemy;
+class Pawn;
+class PlayerController;
 
 class Scene0 : public Scene {
 private:
 	Camera *camera;
 	unsigned int lightNum = 3;
-	MeshObject *demoObject;
+	MeshObject *plane;
 	MeshObject *wallOne;
 	MeshObject *wallTwo;
 	MeshObject *wallThree;
@@ -25,7 +27,7 @@ private:
 	MeshObject *wallFive;
 	MeshObject *wallSix;
 	MeshObject *wallSeven;
-	Enemy *enemy1;
+
 	Vec3 lightSources[3];
 	Vec4 colors[3];
 	Vec3 lightSource;
@@ -33,6 +35,10 @@ private:
 	Mesh *meshPtr;
 	Shader *shaderPtr;
 	Texture *texturePtr;
+	Mesh *playerMesh;
+
+	Pawn* enemy1;
+	PlayerController *player;
 public:
 	explicit Scene0();
 	virtual ~Scene0();
