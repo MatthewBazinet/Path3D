@@ -2,15 +2,15 @@
 
 
 
-std::vector<GridVec> Pathfinding::reconstruct_path(
+std::vector<GridVec> Pathfinding::makePath(
 	GridVec start, GridVec goal,
-	std::unordered_map<GridVec, GridVec> came_from
+	std::unordered_map<GridVec, GridVec> cameFrom
 ) {
 	std::vector<GridVec> path;
 	GridVec current = goal;
 	while (current != start) {
 		path.push_back(current);
-		current = came_from[current];
+		current = cameFrom[current];
 	}
 	path.push_back(start); // optional
 	std::reverse(path.begin(), path.end());
@@ -36,22 +36,22 @@ bool operator<(GridVec a, GridVec b)
 
 }
 
-void SquareGrid::add_rect(int x1, int y1, int x2, int y2)
+void Grid::addRect(int x1, int y1, int x2, int y2)
 {
-		for (int x = x1; x < x2; ++x) {
-			for (int y = y1; y < y2; ++y) {
+		for (int x = x1; x < x2; x++) {
+			for (int y = y1; y < y2; y++) {
 				walls.insert(GridVec{ x, y });
 			}
 		}
 }
 
-void Pathfinding::a_star_search(GridWithWeights graph, GridVec start, GridVec goal, std::unordered_map<GridVec, GridVec>& came_from, std::unordered_map<GridVec, double>& cost_so_far)
+void Pathfinding::aStarSearch(GridWithWeights graph, GridVec start, GridVec goal, std::unordered_map<GridVec, GridVec>& cameFrom, std::unordered_map<GridVec, double>& costSoFar)
 {
 	PriorityQueue<GridVec, double> frontier;
 	frontier.put(start, 0);
 
-	came_from[start] = start;
-	cost_so_far[start] = 0;
+	cameFrom[start] = start;
+	costSoFar[start] = 0;
 
 	while (!frontier.empty()) {
 		GridVec current = frontier.get();
@@ -61,13 +61,12 @@ void Pathfinding::a_star_search(GridWithWeights graph, GridVec start, GridVec go
 		}
 
 		for (GridVec next : graph.neighbors(current)) {
-			double new_cost = cost_so_far[current] + graph.cost(current, next);
-			if (cost_so_far.find(next) == cost_so_far.end()
-				|| new_cost < cost_so_far[next]) {
-				cost_so_far[next] = new_cost;
+			double new_cost = costSoFar[current] + graph.cost(current, next);
+			if (costSoFar.find(next) == costSoFar.end() || new_cost < costSoFar[next]) {
+				costSoFar[next] = new_cost;
 				double priority = new_cost + heuristic(next, goal);
 				frontier.put(next, priority);
-				came_from[next] = current;
+				cameFrom[next] = current;
 			}
 		}
 	}

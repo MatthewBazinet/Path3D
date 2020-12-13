@@ -13,18 +13,18 @@
 #include <algorithm>
 #include <cstdlib>
 
-struct SimpleGraph {
-	std::unordered_map<char, std::vector<char> > edges;
-
-	std::vector<char> neighbors(char id) {
-		return edges[id];
-	}
-};
-
-
+//Essentially a Vec2 but with different operator overloads and less functions
 struct GridVec {
 	int x, y;
 };
+
+//Operator Overloads for GridVec
+
+bool operator == (GridVec a, GridVec b);
+
+bool operator != (GridVec a, GridVec b);
+
+bool operator < (GridVec a, GridVec b);
 
 namespace std {
 	/* implement hash function so we can put GridVec into an unordered_set */
@@ -38,7 +38,7 @@ namespace std {
 }
 
 
-struct SquareGrid {
+struct Grid {
 	std::array<GridVec, 4> DIRS = {
 		GridVec{1, 0}, GridVec{-1, 0},
 		GridVec{0, -1}, GridVec{0, 1}
@@ -46,7 +46,7 @@ struct SquareGrid {
 	int width, height;
 	std::unordered_set<GridVec> walls;
 
-	SquareGrid(int width_, int height_)
+	Grid(int width_, int height_)
 		: width(width_), height(height_) {}
 
 	bool in_bounds(GridVec id) const {
@@ -68,33 +68,18 @@ struct SquareGrid {
 			}
 		}
 
-		if ((id.x + id.y) % 2 == 0) {
-			// see "Ugly paths" section for an explanation:
-			std::reverse(results.begin(), results.end());
-		}
-
 		return results;
 	}
-	void add_rect(int x1, int y1, int x2, int y2);
+	void addRect(int x1, int y1, int x2, int y2);
 };
 
 
 
-// Helpers for GridVec
-
-bool operator == (GridVec a, GridVec b);
-
-bool operator != (GridVec a, GridVec b);
-
-bool operator < (GridVec a, GridVec b);
-
-
-
-struct GridWithWeights : SquareGrid {
-	std::unordered_set<GridVec> forests;
-	GridWithWeights(int w, int h) : SquareGrid(w, h) {}
+struct GridWithWeights : Grid {
+	std::unordered_set<GridVec> roughTerrain;
+	GridWithWeights(int w, int h) : Grid(w, h) {}
 	inline double cost(GridVec from_node, GridVec to_node) const {
-		return forests.find(to_node) != forests.end() ? 5 : 1;
+		return roughTerrain.find(to_node) != roughTerrain.end() ? 5 : 1;
 	}
 };
 
@@ -114,9 +99,9 @@ struct PriorityQueue {
 	}
 
 	T get() {
-		T best_item = elements.top().second;
+		T bestItem = elements.top().second;
 		elements.pop();
-		return best_item;
+		return bestItem;
 	}
 };
 
@@ -126,11 +111,11 @@ struct PriorityQueue {
 
 struct Pathfinding {
 public:
-	static void a_star_search(GridWithWeights graph, GridVec start, GridVec goal, std::unordered_map<GridVec, GridVec>& came_from, std::unordered_map<GridVec, double>& cost_so_far);
+	static void aStarSearch(GridWithWeights graph, GridVec start, GridVec goal, std::unordered_map<GridVec, GridVec>& cameFrom, std::unordered_map<GridVec, double>& costSoFar);
 	static inline double heuristic(GridVec a, GridVec b) {
 		return std::abs(a.x - b.x) + std::abs(a.y - b.y);
 	}
-	static std::vector<GridVec> reconstruct_path(GridVec start, GridVec goal, std::unordered_map<GridVec, GridVec> came_from);
+	static std::vector<GridVec> makePath(GridVec start, GridVec goal, std::unordered_map<GridVec, GridVec> cameFrom);
 };
 #endif
 

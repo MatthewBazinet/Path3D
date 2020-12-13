@@ -1,21 +1,28 @@
-﻿  Scene0.cpp
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(108,36): warning C4305:  'argument': truncation from 'double' to 'float'
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(129,37): warning C4305:  'argument': truncation from 'double' to 'float'
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(149,37): warning C4305:  'argument': truncation from 'double' to 'float'
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(159,38): warning C4305:  'argument': truncation from 'double' to 'float'
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(169,20): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(169,20): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(169,27): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(169,27): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(169,53): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(169,53): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(169,71): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(169,71): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(176,46): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(176,33): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(192,32): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(192,32): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(192,50): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(192,50): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+﻿  Pathfinding.cpp
+  Pawn.cpp
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pawn.cpp(43,15): warning C4018:  '>=': signed/unsigned mismatch
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pawn.cpp(70,35): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pawn.cpp(70,35): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pawn.cpp(70,57): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pawn.cpp(70,57): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pawn.cpp(77,47): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+  Scene0.cpp
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Pawn.cpp(77,33): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(161,39): warning C4305:  'argument': truncation from 'double' to 'float'
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(176,20): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(176,20): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(176,27): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(176,27): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(176,53): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(176,53): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(176,71): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(176,71): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(183,46): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(183,33): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(205,32): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(205,32): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(205,50): warning C4838:  conversion from 'float' to 'int' requires a narrowing conversion
+  Generating Code...
+C:\Users\matth\Documents\Git\Path3D\Engine\ComponentFramework\Scene0.cpp(205,50): warning C4244:  'initializing': conversion from 'float' to 'int', possible loss of data
 Camera.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
   ComponentFramework.vcxproj -> C:\Users\matth\Documents\Git\Path3D\Engine\Debug\ComponentFramework.exe

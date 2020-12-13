@@ -27,20 +27,20 @@ void PlayerController::HandleEvents(const SDL_Event& event)
 	case SDL_SCANCODE_W:
 
 		//move player forward
-		meshBody->setVel(Vec3(0.0f, 0.0f, 1.0f));
+		meshBody->setVel(Vec3(0.0f, 0.0f, 3.0f));
 		//std::cout << "you clicked w on the keyboard" << std::endl;
 		break;
 	case SDL_SCANCODE_A:
 		//move player left
-		meshBody->setVel(Vec3(-1.0f, 0.0f, 0.0f));
+		meshBody->setVel(Vec3(-3.0f, 0.0f, 0.0f));
 		break;
 	case SDL_SCANCODE_S:
 		//move player backward
-		meshBody->setVel(Vec3(0.0f, 0.0f, -1.0f));
+		meshBody->setVel(Vec3(0.0f, 0.0f, -3.0f));
 		break;
 	case SDL_SCANCODE_D:
 		//move player right
-		meshBody->setVel(Vec3(1.0f, 0.0f, 0.0f));
+		meshBody->setVel(Vec3(3.0f, 0.0f, 0.0f));
 		break;
 	}
 	if (event.type == SDL_KEYUP) {

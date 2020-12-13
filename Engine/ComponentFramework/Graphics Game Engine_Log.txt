@@ -4,4 +4,11 @@
 [INFO]: Graphics card name Intel(R) UHD Graphics 630
 [INFO]: GLSL Version 4.60 - Build 26.20.100.6911
 [INFO]: Created Scene0: 
-[INFO]: Deleting the GameSceneManager
+[INFO]: Created Scene0: 
+[INFO]: Created Scene0: 
+[INFO]: Created Scene0: 
+[INFO]: Created Scene0: 
+[INFO]: Created Scene0: 
+[INFO]: Created Scene0: 
+[INFO]: Created Scene0: 
+[INFO]: Created Scene0: 

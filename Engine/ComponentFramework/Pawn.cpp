@@ -36,8 +36,8 @@ void Pawn::Update(float deltaTime)
 	Vec3 pos = meshBody->getPos();
 	if (path.size() > 0) {
 
-		if (pos.x >= destination.x - 0.5 && pos.x <= destination.x + 0.5) {
-			if (pos.z >= destination.z - 0.5 && pos.z <= destination.z + 0.5) {
+		if (pos.x >= destination.x - 0.25 && pos.x <= destination.x + 0.25) {
+			if (pos.z >= destination.z - 0.25 && pos.z <= destination.z + 0.25) {
 
 				index++;
 				if (index >= path.size()) {
@@ -68,10 +68,10 @@ void Pawn::Render()
 void Pawn::FindPath(GridWithWeights grid, GridVec targetPosition)
 {
 	GridVec start{ meshBody->getPos().x, meshBody->getPos().y };
-	std::unordered_map<GridVec, GridVec> came_from;
-	std::unordered_map<GridVec, double> cost_so_far;
-	Pathfinding::a_star_search(grid, start, targetPosition, came_from, cost_so_far);
-	std::vector<GridVec> path = Pathfinding::reconstruct_path(start, targetPosition, came_from);
+	std::unordered_map<GridVec, GridVec> cameFrom;
+	std::unordered_map<GridVec, double> costSoFar;
+	Pathfinding::aStarSearch(grid, start, targetPosition, cameFrom, costSoFar);
+	std::vector<GridVec> path = Pathfinding::makePath(start, targetPosition, cameFrom);
 	std::vector<Vec3> vecPath;
 	for (unsigned int i = 0; i < path.size(); i++) {
 		vecPath.push_back(Vec3(path[i].x, 0, path[i].y));
