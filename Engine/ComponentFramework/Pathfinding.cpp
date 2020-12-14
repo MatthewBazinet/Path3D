@@ -1,24 +1,6 @@
 #include "Pathfinding.h"
 
 
-
-std::vector<GridVec> Pathfinding::makePath(
-	GridVec start, GridVec goal,
-	std::unordered_map<GridVec, GridVec> cameFrom
-) {
-	std::vector<GridVec> path;
-	GridVec current = goal;
-	while (current != start) {
-		path.push_back(current);
-		current = cameFrom[current];
-	}
-	path.push_back(start); // optional
-	std::reverse(path.begin(), path.end());
-	return path;
-}
-
-
-
 bool operator==(GridVec a, GridVec b)
 {
 	return a.x == b.x && a.y == b.y;
@@ -71,3 +53,19 @@ void Pathfinding::aStarSearch(GridWithWeights graph, GridVec start, GridVec goal
 		}
 	}
 }
+
+std::vector<GridVec> Pathfinding::makePath(
+	GridVec start, GridVec goal,
+	std::unordered_map<GridVec, GridVec> cameFrom
+) {
+	std::vector<GridVec> path;
+	GridVec current = goal;
+	while (current != start) {
+		path.push_back(current);
+		current = cameFrom[current];
+	}
+	path.push_back(start);
+	std::reverse(path.begin(), path.end());
+	return path;
+}
+

@@ -27,7 +27,7 @@ bool operator != (GridVec a, GridVec b);
 bool operator < (GridVec a, GridVec b);
 
 namespace std {
-	/* implement hash function so we can put GridVec into an unordered_set */
+	//implement hash function so we can put GridVec into an unordered_set 
 	template <> struct hash<GridVec> {
 		typedef GridVec argument_type;
 		typedef std::size_t result_type;
@@ -37,7 +37,7 @@ namespace std {
 	};
 }
 
-
+//A two dimensional coordinate system that can contain walls that are impassable
 struct Grid {
 	std::array<GridVec, 4> DIRS = {
 		GridVec{1, 0}, GridVec{-1, 0},
@@ -49,7 +49,7 @@ struct Grid {
 	Grid(int width_, int height_)
 		: width(width_), height(height_) {}
 
-	bool in_bounds(GridVec id) const {
+	bool inBounds(GridVec id) const {
 		return 0 <= id.x && id.x < width
 			&& 0 <= id.y && id.y < height;
 	}
@@ -63,7 +63,7 @@ struct Grid {
 
 		for (GridVec dir : DIRS) {
 			GridVec next{ id.x + dir.x, id.y + dir.y };
-			if (in_bounds(next) && passable(next)) {
+			if (inBounds(next) && passable(next)) {
 				results.push_back(next);
 			}
 		}
@@ -74,7 +74,7 @@ struct Grid {
 };
 
 
-
+//A Grid that has sections that are roughTerrain meaning they cost more to navigate
 struct GridWithWeights : Grid {
 	std::unordered_set<GridVec> roughTerrain;
 	GridWithWeights(int w, int h) : Grid(w, h) {}
@@ -83,7 +83,7 @@ struct GridWithWeights : Grid {
 	}
 };
 
-
+//A wrapper around std::priority_queue that reverses the order
 template<typename T, typename priority_t>
 struct PriorityQueue {
 	typedef std::pair<priority_t, T> PQElement;
@@ -108,7 +108,7 @@ struct PriorityQueue {
 
 
 
-
+//Contains the aStar algorithm
 struct Pathfinding {
 public:
 	static void aStarSearch(GridWithWeights graph, GridVec start, GridVec goal, std::unordered_map<GridVec, GridVec>& cameFrom, std::unordered_map<GridVec, double>& costSoFar);
